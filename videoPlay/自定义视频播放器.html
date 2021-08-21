@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入css样式表 -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/video.css">
+    <!-- 引入图标字体样式表 -->
+    <link rel="stylesheet" href="font/fonts/iconfont.css">
+    <!-- 引入js表 -->
+    <script src="js/video.js"></script>
+    <!-- 引入网页图标 -->
+    <link rel="icon" href="icon/title.webp">
+    <title>自定义视频播放器</title>
+    <style type="text/css">
+        body {
+            /* 取消文本被选中 */
+            -moz-user-select: none;
+            /*火狐*/
+            -webkit-user-select: none;
+            /*webkit浏览器*/
+            -ms-user-select: none;
+            /*IE10*/
+            -khtml-user-select: none;
+            /*早期浏览器*/
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 外部容器 -->
+    <div id="wrapper">
+        <!-- 引入视频 -->
+        <video id="video">
+            <source src="video/☆往事随風☆.mp4">
+            <source src="video/王者荣耀.mp4">
+            <source src="video/小小梦魇(2).mp4">
+            <span>你的浏览器不支持播放，请下载视频</span>
+        </video>
+        <!-- 视频上方悬浮按钮 -->
+        <div class="btn">
+            <i class="iconfont">&#xe601;</i>
+        </div>
+        <!-- 视频控件 -->
+        <div class="control">
+            <!-- 播放按钮和重载按钮 -->
+            <div class="video-btn">
+                <div class="start">
+                    <i class="iconfont">&#xe601;</i>
+                </div>
+                <div class="reload">
+                    <i class="iconfont">&#xe603;</i>
+                </div>
+            </div>
+            <!-- 中间进度条 -->
+            <div class="video-progress" id="1">
+                <!-- 进度条 -->
+                <div class="wrap">
+                    <!-- 进度条方块 -->
+                    <div class="inner"></div>
+                </div>
+                <!-- 进度颜色 -->
+                <div class="deep"></div>
+            </div>
+            <!-- 右边剩余部分 -->
+            <div class="others">
+                <!-- 进度时间 -->
+                <div class="time">
+                    <span class="now">00:00:00</span>/
+                    <span class="all">00:00:00</span>
+                </div>
+                <div class="speed">
+                    <span>倍速</span>
+                    <ul>
+                        <li>2x</li>
+                        <li>1.75x</li>
+                        <li>1.5x</li>
+                        <li>1.0x</li>
+                        <li>0.75x</li>
+                        <li>0.5x</li>
+                    </ul>
+                </div>
+                <!-- 声音部分 -->
+                <div class="sound">
+                    <!-- 声音按钮 -->
+                    <div class="sound-btn">
+                        <span class="iconfont">&#xe607;</span>
+                    </div>
+                    <!-- 声音进度条 -->
+                    <div class="sound-progress">
+                        <!-- 进度条 -->
+                        <div class="wrap">
+                            <!-- 进度条方块 -->
+                            <div class="inner"></div>
+                        </div>
+                        <!-- 进度颜色 -->
+                        <div class="deep"></div>
+                    </div>
+                </div>
+                <!-- 全屏按钮 -->
+                <div class="full-screen">
+                    <div class="full-btn">
+                        <i class="iconfont">&#xe755;</i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
